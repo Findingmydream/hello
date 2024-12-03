@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanseo Airline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Hanseo Airline</h1>
+        <!-- 로그인 버튼 추가 -->
+        <button class="login-btn" onclick="goToLogin()">로그인</button>
+    </header>
+
+    <main class="main">
+        <section class="reservation">
+            <h2>비행편 예약</h2>
+            <form>
+                <!-- 출발 도시 -->
+                <div class="form-group">
+                    <label for="departure">From</label>
+                    <input type="text" id="departure" placeholder="Departure City">
+                </div>
+                <!-- 도착 도시 -->
+                <div class="form-group">
+                    <label for="arrival">To</label>
+                    <input type="text" id="arrival" placeholder="Arrival City">
+                </div>
+                <!-- 출발일 -->
+                <div class="form-group">
+                    <label for="departure-date">출발일</label>
+                    <input type="date" id="departure-date">
+                </div>
+                <!-- 도착일 -->
+                <div class="form-group">
+                    <label for="return-date">도착일</label>
+                    <input type="date" id="return-date">
+                </div>
+                <!-- 승객 -->
+                <div class="form-group">
+                    <label for="passenger">승객</label>
+                    <input type="number" id="passenger" value="1" min="1">
+                </div>
+                <button type="submit">비행편 검색</button>
+            </form>
+        </section>
+
+        <section class="popular-destinations">
+            <h2>유명한 관광지</h2>
+            <div class="destinations">
+                <!-- 도쿄 -->
+                <div class="destination">
+                    <img src="tokyo.jpg" alt="도쿄">
+                    <p>도쿄</p>
+                    <p>20만원부터</p>
+                </div>
+                <!-- 파리 -->
+                <div class="destination">
+                    <img src="paris.jpg" alt="Paris">
+                    <p>Paris</p>
+                    <p>80만원부터</p>
+                </div>
+                <!-- 뉴욕 -->
+                <div class="destination">
+                    <img src="newyork.jpg" alt="New York">
+                    <p>New York</p>
+                    <p>100만원부터</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function goToLogin() {
+            window.location.href = "login_form.html"; // login_form.html로 이동
+        }
+    </script>
+</body>
+</html>
